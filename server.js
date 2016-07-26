@@ -1,16 +1,17 @@
-﻿var app = require('express')();
+﻿const express = require('express');
+var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 const fs = require("fs");
-
-app.get('/', function(req, res){
-    res.send('<h1>Welcome Realtime Server</h1>');
-});
+//const path = require('path');
 
 const index = fs.readFileSync('./index.html', {
     encoding: 'utf-8'
 });
+
 const str = index;
+
+app.use('/assets', express.static('./assets/'));
 
 app.get('/', function(req, res) {
     res.status(200).send(str);
