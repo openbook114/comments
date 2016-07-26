@@ -109,7 +109,7 @@
 			//this.scrollToBottom();
 			
 			//连接websocket后端服务器
-			this.socket = io.connect('ws://newdirect-commets.daoapp.io:3000');
+			this.socket = io.connect('ws://newdirect-comments.daoapp.io:3000');
 			
 			//告诉服务器端有用户登录
 			this.socket.emit('login', {userid:this.userid, username:this.username});
