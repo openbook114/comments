@@ -1,0 +1,4 @@
+build:
+  image: node:6-onbuild
+  commands:
+    - echo 'done'
