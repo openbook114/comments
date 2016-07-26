@@ -7,6 +7,15 @@ app.get('/', function(req, res){
     res.send('<h1>Welcome Realtime Server</h1>');
 });
 
+const index = fs.readFileSync('./index.html', {
+    encoding: 'utf-8'
+});
+const str = index;
+
+app.get('/', function(req, res) {
+    res.status(200).send(str);
+});
+
 //在线用户
 var onlineUsers = {};
 //当前在线人数
