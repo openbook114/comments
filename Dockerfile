@@ -1,12 +1,8 @@
-FROM node:6.3-onbuild
+FROM node:6-onbuild
 
 WORKDIR /app
 
 RUN npm install -g forever
-
-COPY ./package.json /app/
-
-RUN npm install
 
 COPY . /app/
 
