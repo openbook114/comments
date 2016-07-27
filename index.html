@@ -2,40 +2,40 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <!--<meta name="format-detection" content="telephone=no"/>-->
     <!--<meta name="format-detection" content="email=no"/>-->
     <title>评论</title>
-    <script type="text/javascript">
-        var jsVer = 22;
-        var pWidth = parseInt(window.screen.width);
-        var Scale = pWidth/640;
-        var ua = navigator.userAgent;
-        if(Scale<1){
-            document.write('<meta name="screen-orientation" content="portrait">');
-            document.write('<meta name="x5-orientation" content="portrait"/>');
-            document.write('<meta name="full-screen" content="yes">');
-            document.write('<meta name="x5-fullscreen" content="true"/>');
-            document.write('<meta name="browsermode" content="application"/>');
-            document.write('<meta name="x5-page-mode" content="app"/>');
-            document.write('<meta name="apple-touch-fullscreen" content="YES">');
-            document.write('<meta name="apple-mobile-web-app-capable" content="yes">');
-        }
-        if (/Android (\d+\.\d+)/.test(ua)){
-            var version = parseFloat(RegExp.$1);
-            // andriod 2.3
-            if(version>2.3){
-                document.write('<meta name="viewport" content="width=640, minimum-scale = '+Scale+', maximum-scale = '+Scale+', target-densitydpi=device-dpi">');
-                // andriod 2.3以上
-            }else{
-                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
-            }
-            // 其他系统
-        } else {
-            document.write('<meta name="viewport" content="width=640, user-scalable=no , target-densitydpi=device-dpi">');
-        }
-    </script>
-    <meta name="viewport" content="width=640, user-scalable=no , target-densitydpi=device-dpi">
+    <!--<script type="text/javascript">-->
+        <!--var jsVer = 22;-->
+        <!--var pWidth = parseInt(window.screen.width);-->
+        <!--var Scale = pWidth/640;-->
+        <!--var ua = navigator.userAgent;-->
+        <!--if(Scale<1){-->
+            <!--document.write('<meta name="screen-orientation" content="portrait">');-->
+            <!--document.write('<meta name="x5-orientation" content="portrait"/>');-->
+            <!--document.write('<meta name="full-screen" content="yes">');-->
+            <!--document.write('<meta name="x5-fullscreen" content="true"/>');-->
+            <!--document.write('<meta name="browsermode" content="application"/>');-->
+            <!--document.write('<meta name="x5-page-mode" content="app"/>');-->
+            <!--document.write('<meta name="apple-touch-fullscreen" content="YES">');-->
+            <!--document.write('<meta name="apple-mobile-web-app-capable" content="yes">');-->
+        <!--}-->
+        <!--if (/Android (\d+\.\d+)/.test(ua)){-->
+            <!--var version = parseFloat(RegExp.$1);-->
+            <!--// andriod 2.3-->
+            <!--if(version>2.3){-->
+                <!--document.write('<meta name="viewport" content="width=640, minimum-scale = '+Scale+', maximum-scale = '+Scale+', target-densitydpi=device-dpi">');-->
+                <!--// andriod 2.3以上-->
+            <!--}else{-->
+                <!--document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');-->
+            <!--}-->
+            <!--// 其他系统-->
+        <!--} else {-->
+            <!--document.write('<meta name="viewport" content="width=640, user-scalable=no , target-densitydpi=device-dpi">');-->
+        <!--}-->
+    <!--</script>-->
+    <!--<meta name="viewport" content="width=640, user-scalable=no , target-densitydpi=device-dpi">-->
     <link rel="stylesheet" href="assets/agile/css/agile.layout.css">
     <link rel="stylesheet" href="assets/third/seedsui/plugin/seedsui/seedsui.min.css">
     <!--[if lt IE 8]    <link rel="stylesheet" type="text/css" href="./style.css"/>
@@ -78,7 +78,7 @@
                         <!--</object>-->
 
                         <!--<video src="http://oapi.evideocloud.com/b3/get_addr?uid=123454581&vid=b61ebbb4515d11e6af2506d96dcff49f"></video>-->
-                        <div style="width:610px;overflow:hidden;background:#000;"><video src="http://play.evideocloud.net/123454581/e/c3/e4/75/hls/238817ba614984d8f11f316c59e01a7b_2.m3u8?duration=1535&owner=123454581&path=%2F123454581%2Fe%2Fc3%2Fe4%2F75%2Fhls%2F238817ba614984d8f11f316c59e01a7b_2.m3u8&quality=640P&sign=d858f1ea8744f5f2f3b1055acb944234eb13b3e32914c7d4d31226c03f276af7&timestamp=1469594578&title=08.33.06.380-08.flv&vid=ec3e4759515b11e6af2506d96dcff49f&&para1=yyy&para2=xxx" controls="controls"></video></div>
+                        <div style="background:#000;"><video src="http://play.evideocloud.net/123454581/e/c3/e4/75/hls/238817ba614984d8f11f316c59e01a7b_2.m3u8?duration=1535&owner=123454581&path=%2F123454581%2Fe%2Fc3%2Fe4%2F75%2Fhls%2F238817ba614984d8f11f316c59e01a7b_2.m3u8&quality=640P&sign=d858f1ea8744f5f2f3b1055acb944234eb13b3e32914c7d4d31226c03f276af7&timestamp=1469594578&title=08.33.06.380-08.flv&vid=ec3e4759515b11e6af2506d96dcff49f&&para1=yyy&para2=xxx" controls="controls"></video></div>
                     </div>
                     <div class="scroller">
                         <details open>
