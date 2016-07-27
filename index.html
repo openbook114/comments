@@ -16,7 +16,7 @@
 <body>
 <div id="loginbox">
     <div style="width:260px;margin:200px auto;">
-        请先输入你在聊天室的昵称
+        请先输入你的昵称
         <br/>
         <br/>
         <input type="text" style="width:180px;" placeholder="请输入用户名" id="username" name="username"/>
@@ -62,27 +62,27 @@
 <!--- third -->
 <script type="text/javascript" src="assets/third/jquery/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="assets/third/jquery/jquery.mobile.custom.min.js"></script>
-<script type="text/javascript" src="assets/third/iscroll/iscroll-probe.js"></script>
+<!--<script type="text/javascript" src="assets/third/iscroll/iscroll-probe.js"></script>-->
 <script type="text/javascript" src="assets/agile/js/agile.js"></script>
 <!--<script type="text/javascript" src="./assets/bridge/exmobi.js"></script>-->
 <!--<script type="text/javascript" src="./assets/bridge/agile.exmobi.js"></script>-->
 <!-- app -->
 <script type="text/javascript" src="assets/app/js/app.seedsui.js"></script>
-<script>
-    //当scroll初始化会进入此监听
-    $('#index_article').on('scrollInit', function(){
-        var scroll = A.Scroll(this);//已经初始化后不会重新初始化，但是可以得到滚动对象
-        //监听滚动到顶部事件，可以做一些逻辑操作
-        scroll.on('scrollTop', function(){
-            A.showToast('滚动到顶部');
-            scroll.refresh(); //如果scroll区域dom有改变，需要刷新一下此区域
-        });
-        //监听滚动到底部事件，可以做一些逻辑操作
-        scroll.on('scrollBottom', function(){
-            A.showToast('滚动到底部');
-            scroll.refresh(); //如果scroll区域dom有改变，需要刷新一下此区域，
-        });
-    });
-</script>
+<!--<script>-->
+    <!--//当scroll初始化会进入此监听-->
+    <!--$('#index_article').on('scrollInit', function(){-->
+        <!--var scroll = A.Scroll(this);//已经初始化后不会重新初始化，但是可以得到滚动对象-->
+        <!--//监听滚动到顶部事件，可以做一些逻辑操作-->
+<!--//        scroll.on('scrollTop', function(){-->
+<!--//            A.showToast('滚动到顶部');-->
+<!--//            scroll.refresh(); //如果scroll区域dom有改变，需要刷新一下此区域-->
+<!--//        });-->
+<!--//        //监听滚动到底部事件，可以做一些逻辑操作-->
+<!--//        scroll.on('scrollBottom', function(){-->
+<!--//            A.showToast('滚动到底部');-->
+<!--//            scroll.refresh(); //如果scroll区域dom有改变，需要刷新一下此区域，-->
+<!--//        });-->
+    <!--});-->
+<!--</script>-->
 </body>
 </html>
