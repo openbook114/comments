@@ -74,9 +74,9 @@
 			//this.msgObj.appendChild(section);
 			
 			if(user.username == this.username){
-				for(var i= 0;i<o.room101.length;i++){
-					var contentDiv = '<small>'+o.room101[i].comment+'</small>';
-					var usernameDiv = '<p>'+o.room101[i].username+'</p>';
+				for(var i= 0;i<o.room001.length;i++){
+					var contentDiv = '<small>'+o.room001[i].comment+'</small>';
+					var usernameDiv = '<p>'+o.room001[i].username+'</p>';
 
 					var section = d.createElement('li');
 					section.innerHTML = "<div class='justify-content'>"+usernameDiv + contentDiv+"</div>";
@@ -109,7 +109,8 @@
 			//this.scrollToBottom();
 			
 			//连接websocket后端服务器
-			this.socket = io.connect('ws://newdirect-comments.daoapp.io');
+			//this.socket = io.connect('ws://newdirect-comments.daoapp.io');
+			this.socket = io.connect('ws://localhost:3000');
 			
 			//告诉服务器端有用户登录
 			this.socket.emit('login', {userid:this.userid, username:this.username});

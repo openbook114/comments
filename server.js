@@ -37,8 +37,18 @@ io.on('connection', function(socket){
             onlineCount++;
         }
 
-		var txt = fs.readFileSync('./chat.txt', 'utf8');
-        var json = JSON.parse('{"room101": ['+txt.substr(0,txt.length-2)+']}');
+        //设置显示条数（最新的），具体做法：读取数据、分割为数据、删除前linenum-displaynum条、倒排序让最新的放到最前面
+        var display_num = 5;
+		var txt = fs.readFileSync('./room/room001.txt', 'utf8');
+        var lines = txt.split("\n");
+        lines.pop();
+        var linenum = lines.length;
+        if(linenum > display_num){
+            lines.splice(0,linenum - display_num);
+        }
+        lines.reverse();
+        txt = lines.join('\n');
+        var json = JSON.parse('{"room001": ['+txt.substr(0,txt.length-1)+']}');
 		var msg = Object.assign({onlineUsers:onlineUsers, onlineCount:onlineCount, user:obj},json);
 
         //向所有客户端广播用户加入
@@ -69,7 +79,7 @@ io.on('connection', function(socket){
     socket.on('message', function(obj){
         //向所有客户端广播发布的消息
         io.emit('message', obj);
-        fs.appendFileSync('chat.txt','{"username":"'+obj.username+'","comment":"'+obj.content+'"},\n');
+        fs.appendFileSync('./room/room001.txt','{"username":"'+obj.username+'","comment":"'+obj.content+'"},\n');
         console.log(obj.username+'说：'+obj.content);
     });
 
