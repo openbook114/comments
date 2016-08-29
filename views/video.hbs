@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>电生理之家</title>
+    <link rel="stylesheet" href="/assets/app/css/zheng.css">
+    <script type="text/javascript" src="/assets/app/js/stat.js"></script>
+</head>
+
+<script type="text/javascript" src="/assets/third/jquery/jquery-2.1.3.min.js"></script>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="content">
+    {{#each list}}
+        <div class="yi">
+            <div class="yi_pic">
+                <a href={{this.url}}><img src={{pic}} /></a>
+            </div>
+            <div class="yi_content">
+                <a href={{this.url}}><h3>{{this.title}}</h3></a>
+            </div>
+        </div>
+    {{/each}}
+    <div class="yi">
+        <div class="next">
+            <h2>更多精彩视频，敬请期待……</h2>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    //下拉效果
+    $(document).ready(function(){
+        $(".content").slideToggle(1500);
+    });
+</script>
+
+</body>
+</html>

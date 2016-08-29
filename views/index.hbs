@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>电生理之家</title>
+    <link rel="stylesheet" href="/assets/agile/css/agile.layout.css">
+    <link rel="stylesheet" href="/assets/third/seedsui/plugin/seedsui/seedsui.min.css">
+    <script type="text/javascript" src="/assets/app/js/stat.js"></script>
+</head>
+<body>
+<div id="loginbox">
+    <div style="width:260px;margin:200px auto;">
+        请输入您的昵称
+        <br/>
+        <br/>
+        <input type="hidden" name="state" id="state" value="{{state}}">
+        <input type="text" style="width:180px;" placeholder="昵称" id="username" name="username" maxlength="20" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')" onpaste="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')" oncontextmenu = "value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')"/>
+        <input type="button"  value="提交" onclick="usernameSubmit();"/>
+        <br />
+        <br />
+        <input type="button" value="跳过" onclick="usernameSkip();"/>
+    </div>
+</div>
+<script type="text/javascript" src="/assets/app/js/login.js"></script>
+
+<!--- third -->
+</body>
+</html>
