@@ -1,6 +1,7 @@
 ﻿const express = require('express');
 var app = express();
 var http = require('http').Server(app);
+<<<<<<< HEAD
 var ios = require('socket.io')(http);
 var io = ios.of('/haishen');
 var request = require('request');
@@ -30,6 +31,35 @@ io.on('connection', function(socket){
 
     socket.on('join', function (obj) {
 
+=======
+var io = require('socket.io')(http);
+const fs = require("fs");
+//const path = require('path');
+
+const index = fs.readFileSync('./index.html', {
+    encoding: 'utf-8'
+});
+
+const str = index;
+
+app.use('/assets', express.static('./assets/'));
+
+app.get('/', function(req, res) {
+    res.status(200).send(str);
+});
+
+//在线用户
+var onlineUsers = {};
+//当前在线人数
+var onlineCount = 0;
+
+io.on('connection', function(socket){
+    console.log('a user connected');
+
+    //监听新用户加入
+    socket.on('login', function(obj){
+        //将新加入用户的唯一标识当作socket的名称，后面退出的时候会用到
+>>>>>>> 195fcb2b9f6bcce7977787ce05765c7694199f3f
         socket.name = obj.userid;
 
         //检查在线列表，如果不在里面就加入
@@ -39,6 +69,7 @@ io.on('connection', function(socket){
             onlineCount++;
         }
 
+<<<<<<< HEAD
         // 将用户昵称加入房间名单中
         if (!roomInfo[roomID]) {
             roomInfo[roomID] = [];
@@ -50,6 +81,11 @@ io.on('connection', function(socket){
         //设置显示条数（最新的），具体做法：读取数据、分割为数据、删除前linenum-displaynum条、倒排序让最新的放到最前面
         var display_num = 200;
         var txt = fs.readFileSync('./room/'+roomID+'.txt', 'utf8');
+=======
+        //设置显示条数（最新的），具体做法：读取数据、分割为数据、删除前linenum-displaynum条、倒排序让最新的放到最前面
+        var display_num = 5;
+		var txt = fs.readFileSync('./room/room001.txt', 'utf8');
+>>>>>>> 195fcb2b9f6bcce7977787ce05765c7694199f3f
         var lines = txt.split("\n");
         lines.pop();
         var linenum = lines.length;
@@ -57,6 +93,7 @@ io.on('connection', function(socket){
             lines.splice(0,linenum - display_num);
         }
         lines.reverse();
+<<<<<<< HEAD
 
         //安全起见，获取的评论记录中删除userid信息后，再将username，comments和tims发送给前台
         for(var i=0;i<lines.length;i++){
@@ -83,6 +120,16 @@ io.on('connection', function(socket){
 
     socket.on('leave', function () {
         socket.emit('disconnect');
+=======
+        txt = lines.join('\n');
+        var json = JSON.parse('{"room001": ['+txt.substr(0,txt.length-1)+']}');
+		var msg = Object.assign({onlineUsers:onlineUsers, onlineCount:onlineCount, user:obj},json);
+
+        //向所有客户端广播用户加入
+        //io.emit('login', {onlineUsers:onlineUsers, onlineCount:onlineCount, user:obj});
+		io.emit('login', msg);
+        console.log(obj.username+'加入了聊天室');
+>>>>>>> 195fcb2b9f6bcce7977787ce05765c7694199f3f
     });
 
     //监听用户退出
@@ -97,6 +144,7 @@ io.on('connection', function(socket){
             //在线人数-1
             onlineCount--;
 
+<<<<<<< HEAD
             var index = roomInfo[roomID].indexOf(socket.name);
             if (index !== -1) {
                 roomInfo[roomID].splice(index, 1);
@@ -350,6 +398,24 @@ app.use('/', router);
 
 
 //监听浏览器3000端口访问
+=======
+            //向所有客户端广播用户退出
+            io.emit('logout', {onlineUsers:onlineUsers, onlineCount:onlineCount, user:obj});
+            console.log(obj.username+'退出了聊天室');
+        }
+    });
+
+    //监听用户发布聊天内容
+    socket.on('message', function(obj){
+        //向所有客户端广播发布的消息
+        io.emit('message', obj);
+        fs.appendFileSync('./room/room001.txt','{"username":"'+obj.username+'","comment":"'+obj.content+'"},\n');
+        console.log(obj.username+'说：'+obj.content);
+    });
+
+});
+
+>>>>>>> 195fcb2b9f6bcce7977787ce05765c7694199f3f
 http.listen(3000, function(){
     console.log('listening on *:3000');
 });
