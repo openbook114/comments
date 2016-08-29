@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a544870c-3c35-4cf0-beec-9b5ef26bb59c" name="默认的" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/app/js/client.js" afterPath="$PROJECT_DIR$/assets/app/js/client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/app/js/login.js" afterPath="$PROJECT_DIR$/assets/app/js/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/list.hbs" afterPath="$PROJECT_DIR$/views/list.hbs" />
     </list>
     <ignored path="websocket.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,8 +29,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5333333">
-              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+            <state vertical-scroll-proportion="-5.266667">
+              <caret line="254" column="34" selection-start-line="254" selection-start-column="34" selection-end-line="254" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -36,15 +39,15 @@
       <file leaf-file-name="client.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/app/js/client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5777027">
-              <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.4341637">
+              <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
               <folding>
-                <marker date="1472433765310" expanded="true" signature="1098:1112" placeholder="..." />
-                <marker date="1472433765310" expanded="true" signature="1170:1184" placeholder="..." />
-                <marker date="1472433765310" expanded="true" signature="1240:1254" placeholder="..." />
-                <marker date="1472433765310" expanded="true" signature="2201:2215" placeholder="..." />
-                <marker date="1472433765310" expanded="true" signature="2282:2296" placeholder="..." />
-                <marker date="1472433765310" expanded="true" signature="2359:2373" placeholder="..." />
+                <marker date="1472436923936" expanded="true" signature="1066:1080" placeholder="..." />
+                <marker date="1472436923936" expanded="true" signature="1138:1152" placeholder="..." />
+                <marker date="1472436923936" expanded="true" signature="1208:1222" placeholder="..." />
+                <marker date="1472436923936" expanded="true" signature="2169:2183" placeholder="..." />
+                <marker date="1472436923936" expanded="true" signature="2250:2264" placeholder="..." />
+                <marker date="1472436923936" expanded="true" signature="2327:2341" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -63,6 +66,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/views/list.hbs" />
+        <option value="$PROJECT_DIR$/assets/app/js/login.js" />
         <option value="$PROJECT_DIR$/assets/app/js/client.js" />
       </list>
     </option>
@@ -138,6 +143,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bench" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bench" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="room" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -344,23 +363,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5333333">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        <state vertical-scroll-proportion="-5.266667">
+          <caret line="254" column="34" selection-start-line="254" selection-start-column="34" selection-end-line="254" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="11" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/list.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46797153">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/room.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06761566">
+          <caret line="2" column="95" selection-start-line="2" selection-start-column="93" selection-end-line="2" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/video.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5213523">
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/app/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7186441">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/room/room001.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/app/js/client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5777027">
-          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.4341637">
+          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
           <folding>
-            <marker date="1472433765310" expanded="true" signature="1098:1112" placeholder="..." />
-            <marker date="1472433765310" expanded="true" signature="1170:1184" placeholder="..." />
-            <marker date="1472433765310" expanded="true" signature="1240:1254" placeholder="..." />
-            <marker date="1472433765310" expanded="true" signature="2201:2215" placeholder="..." />
-            <marker date="1472433765310" expanded="true" signature="2282:2296" placeholder="..." />
-            <marker date="1472433765310" expanded="true" signature="2359:2373" placeholder="..." />
+            <marker date="1472436923936" expanded="true" signature="1066:1080" placeholder="..." />
+            <marker date="1472436923936" expanded="true" signature="1138:1152" placeholder="..." />
+            <marker date="1472436923936" expanded="true" signature="1208:1222" placeholder="..." />
+            <marker date="1472436923936" expanded="true" signature="2169:2183" placeholder="..." />
+            <marker date="1472436923936" expanded="true" signature="2250:2264" placeholder="..." />
+            <marker date="1472436923936" expanded="true" signature="2327:2341" placeholder="..." />
           </folding>
         </state>
       </provider>
